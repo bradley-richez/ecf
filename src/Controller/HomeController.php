@@ -15,4 +15,14 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+    #[Route('/cars',name:'app_cars')]
+    public function cars(): Response 
+    {
+        return $this->render('cars/cars.html.twig');
+    }
+    #[Route('/services',name:'app_services')]
+    public function services(): Response 
+    {
+        return $this->render('services/services.html.twig');
+    }
 }
